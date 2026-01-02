@@ -1,5 +1,8 @@
 {
-  "name": "vipstudy-platform",
+  "name": "static-html-project",
   "version": "1.0.0",
-  "private": true
+  "private": true,
+  "scripts": {
+    "build": "echo \"No build step required\""
+  }
 }
