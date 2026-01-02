@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>vipstudy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <!-- New Cartoon Intro Animation -->
+    <div id="intro-screen">
+        <div class="cartoon-scene">
+            <div class="classroom-bg"></div>
+            <div class="board">
+                <div class="board-text">SCIENCE MAGNET</div>
+            </div>
+            
+           
+            
+            <div class="impact-effect"></div>
+        </div>
+        
+        <div class="vip-text">VIP STUDY</div>
+        <div class="study-text">LOADING..</div>
+        
+        <div class="intro-progress">
+            <div class="intro-progress-bar" id="introProgressBar"></div>
+        </div>
+        
+        <div class="powered-intro">
+            <i class="fas fa-bolt"></i>
+            POWERED BY SCIENCE MAGNET - VIPSTUDY
+        </div>
+    </div>
+
+    <!-- Batch Selection Modal -->
+    <div class="batch-modal" id="batchModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="modal-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            
+            <h2 class="modal-title">Choose Your Action</h2>
+            <p class="modal-subtitle">Select how you want to proceed with this batch</p>
+            
+            <div class="selected-batch">
+                <h4 id="selectedBatchTitle">Batch Name</h4>
+                <p><i class="fas fa-rupee-sign"></i> <span id="selectedBatchPrice">FREE</span> • Lifetime Access</p>
+            </div>
+            
+            <div class="option-buttons">
+                <a href="https://t.me/+roQAmujl1TRjMjE1" target="_blank" class="option-button telegram-option" id="telegramOption">
+                    <i class="fab fa-telegram"></i>
+                    Join Telegram Channel
+                </a>
+                
+                <a href="#" target="_blank" class="option-button batch-option" id="batchLinkOption">
+                    <i class="fas fa-external-link-alt"></i>
+                    Continue to Batch
+                </a>
+            </div>
+            
+            <p class="modal-note">
+                Join Telegram for study materials & updates. Continue directly to batch for immediate access.
+            </p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <!-- Header -->
+        <div class="header">
+            <button class="menu-btn" id="menuBtn">
+                <div class="menu-icon"></div>
+            </button>
+            <div class="header-title">
+                <h1>SCIENCE MAGNET</h1>
+                <p>VIP STUDY PLATFORM</p>
+            </div>
+            <div class="timer-badge">
+                <span class="timer-dot"></span>
+                <span class="timer-text" id="timer">0h 0m</span>
+            </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-value" id="totalCourses">10</span>
+                <span class="stat-label">Total Batches</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value" id="favoriteCount">0</span>
+                <span class="stat-label">Favorites</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value" id="activeUsers">2.5K+</span>
+                <span class="stat-label">Active Students</span>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-wrapper">
+                <input type="text" class="search-box" id="searchBox" placeholder="Search your batch... (DSSSB, SSC GD, Bihar, etc.)">
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters-container">
+            <div class="filters-wrapper">
+                <button class="filter-btn active" data-filter="all">All Batches</button>
+                
+                <button class="filter-btn" data-filter="favorite">Favorites</button>
+            </div>
+        </div>
+
+        <!-- Course Cards -->
+        <div class="courses-wrapper" id="coursesWrapper">
+            <!-- Course 1 -->
+            <div class="course-card" data-title="Basic Science & Engineering  2024 (Recorded)" data-category="govt" data-price="₹499" data-link="1.HTML">
+                <div class="course-banner">
+                    <img src="/public/images/photo_2026-01-02_12-03-05.jpg" alt="Course" onerror="this.src='https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
+                    <div class="price-tag">₹499</div>
+                    <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+                    <div class="course-badge">VOD</div>
+                </div>
+                <div class="course-info">
+                    <h3 class="course-title">Basic Science & Engineering  2024 (Recorded)</h3>
+                    <div class="course-meta">
+                        <div class="duration-badge">
+                            <i class="fas fa-clock duration-icon"></i>
+                            <span>Lifetime Access</span>
+                        </div>
+                        <span class="arrow-icon">→</span>
+                    </div>
+                </div>
+            </div>
+
+              <!-- Course Cards -->
+        
+            <div class="course-card" data-title="RRB JE Mechanical Umang Batch" data-category="govt" data-price="₹499" data-link="#">
+                <div class="course-banner">
+                    <img src="/public/images/photo_2026-01-02_12-14-29.jpg" alt="Course" onerror="this.src='https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
+                    <div class="price-tag">₹499</div>
+                    <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+                    <div class="course-badge">VOD</div>
+                </div>
+                <div class="course-info">
+                    <h3 class="course-title">Basic Science & Engineering  2024 (Recorded)</h3>
+                    <div class="course-meta">
+                        <div class="duration-badge">
+                            <i class="fas fa-clock duration-icon"></i>
+                            <span>Lifetime Access</span>
+                        </div>
+                        <span class="arrow-icon">→</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Course 2 -->
+            <div class="course-card" data-title="निर्माण Batch Railway General Science Foundation Course 2025" data-category="govt" data-price="FREE" data-link="2.HTML">
+                <div class="course-banner">
+                    <img src="/public/images/photo_2026-01-02_12-02-26.jpg" alt="Course" onerror="this.src='https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
+                    <div class="price-tag">free</div>
+                    <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+                    <div class="course-badge">NEW</div>
+                </div>
+                <div class="course-info">
+                    <h3 class="course-title">निर्माण Batch Railway General Science Foundation Course 2025</h3>
+                    <div class="course-meta">
+                        <div class="duration-badge">
+                            <i class="fas fa-clock duration-icon"></i>
+                            <span>Lifetime Access</span>
+                        </div>
+                        <span class="arrow-icon">→</span>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        <!-- Empty State -->
+        <div class="empty-state" id="emptyState">
+            <div class="empty-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <h3 class="empty-title">No Batches Found</h3>
+            <p class="empty-text">No batches match your search. Please try a different search term.</p>
+        </div>
+
+       
+
+    <script src=js/main.js></script>
+</body>
+</html>
+
+

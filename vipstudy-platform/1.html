@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProCourse X | Ultra Modern Learning</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/course1.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+
+  <!-- SPLASH SCREEN -->
+  <div id="splash">
+    <div class="splash-logo">
+      
+      
+    </div>
+    <p style="color: var(--text-dim); margin-bottom: 1rem;">Launching Next-Gen Learning Platform</p>
+    <div class="splash-progress">
+      <div class="progress-bar"></div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="#" class="nav-brand">
+      <div class="brand-icon">VIP</div>
+      <span>STUDY</span>
+    </a>
+    
+    <div class="nav-links">
+      <a href="#" class="nav-link active">
+        <i class="fas fa-graduation-cap"></i> Learning
+      </a>
+      <a href="#" class="nav-link">
+        <i class="fas fa-rocket"></i> Challenges
+      </a>
+      <a href="#" class="nav-link">
+        <i class="fas fa-trophy"></i> Achievements
+      </a>
+      <a href="#" class="nav-link">
+        <i class="fas fa-users"></i> Community
+      </a>
+      <div class="user-avatar">JD</div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <div class="dashboard">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-card animate-in">
+          <div class="card-header">
+            <h3 class="card-title">
+              <i class="fas fa-atom"></i> SELECT Subject 
+            </h3>
+            
+          </div>
+          <div class="subject-list">
+            <div class="subject-chip active" onclick="loadSubject('TECHNICIAN')">
+              <div class="subject-info">
+                <div class="subject-icon">
+                  <i class="fas fa-atom"></i>
+                </div>
+                <div class="subject-text">
+                  <div class="subject-name">TECHNICIAN GRADE-I</div>
+                 
+                </div>
+              </div>
+              
+            </div>
+            
+            <div class="subject-chip" onclick="loadSubject('BSED')">
+              <div class="subject-info">
+                <div class="subject-icon">
+                  <i class="fas fa-dna"></i>
+                </div>
+                <div class="subject-text">
+                  <div class="subject-name">BSED 2025</div>
+                 
+                </div>
+              </div>
+            
+            </div>
+            
+            <div class="subject-chip" onclick="loadSubject('BASICSCIENCE')">
+              <div class="subject-info">
+                <div class="subject-icon">
+                 <i class="fas fa-dna"></i>
+                </div>
+                <div class="subject-text">
+                  <div class="subject-name">BASIC SCIENCE AND ENGINEERING DRAWING</div>
+                 
+                </div>
+              </div>
+           
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-card animate-in delay-1">
+          <div class="card-header">
+            <h3 class="card-title">
+              <i class="fas fa-chart-line"></i> Progress
+            </h3>
+          </div>
+          <div class="progress-ring">
+            <svg viewBox="0 0 100 100" class="ring-circle">
+              <circle cx="50" cy="50" r="45"></circle>
+              <circle cx="50" cy="50" r="45" class="ring-progress" 
+                      style="--progress: 169.56;"></circle>
+            </svg>
+            <div class="progress-value">60%</div>
+          </div>
+          <p style="text-align: center; color: var(--text-dim); font-size: 0.9rem;">
+            Overall Learning Progress
+          </p>
+        </div>
+      </aside>
+
+      <!-- CONTENT AREA -->
+      <main class="content-area">
+        <div class="content-header animate-in delay-2">
+          <div class="header-left">
+            <h1 id="subjectTitle">YOUR SELECTED SUBJECT</h1>
+            
+          </div>
+          <div class="header-actions">
+       
+           
+           
+            </button>
+          </div>
+        </div>
+
+        <div class="lecture-grid" id="lectureContainer">
+          <!-- Lectures will load here -->
+        </div>
+      </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer animate-in delay-4">
+      <div class="footer-links">
+        <a href="#" class="footer-link">About</a>
+        <a href="#" class="footer-link">Careers</a>
+        <a href="#" class="footer-link">Privacy</a>
+        <a href="#" class="footer-link">Terms</a>
+        <a href="#" class="footer-link">Help</a>
+      </div>
+      <p>&copy; 2023 ProCourse X. Next-Generation Learning Platform.</p>
+    </footer>
+  </div>
+
+  <!-- MODAL PLAYER -->
+  <div class="modal-player" id="playerModal">
+    <div class="player-container">
+      <div class="player-header">
+        <h3 class="player-title" id="playerTitle"></h3>
+        <button class="player-close" onclick="closePlayer()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="player-body" id="playerBody"></div>
+    </div>
+  </div>
+<script src="js/course1.js"></script>
+ 
+</body>
+</html>

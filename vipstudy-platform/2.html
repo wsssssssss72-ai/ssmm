@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PARO MAX | Next-Gen Learning Platform</title>
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="/css/course2.css">
+  <!-- =====================
+       PARO MAX UI/UX SYSTEM
+       FUTURISTIC DESIGN
+  ====================== -->
+  
+</head>
+<body>
+
+  <!-- PARO MAX INTRO -->
+  <div id="paro-intro">
+    <div class="intro-logo">
+      <div class="logo-glow">VIPSTUDY</div>
+      
+    </div>
+    <div class="intro-loading">
+      <div class="intro-loading-bar"></div>
+    </div>
+  </div>
+
+  <!-- PARO MAX HEADER -->
+  <header class="paro-header">
+    <div class="header-logo">
+      <div class="logo-icon">P</div>
+      <div class="logo-text">VIPSTUSY</div>
+    </div>
+    
+    <nav class="header-nav">
+      <a href="#" class="nav-link">Dashboard</a>
+      <a href="#" class="nav-link">Library</a>
+      <a href="#" class="nav-link">Progress</a>
+      <a href="#" class="nav-link">Community</a>
+      <a href="#" class="nav-link">Settings</a>
+    </nav>
+    
+    <div class="header-actions">
+      <div class="user-avatar">PM</div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="paro-main">
+    <!-- SUBJECTS PANEL -->
+    <aside class="paro-subjects">
+      <div class="subjects-header">
+        <h3 class="subjects-title">Subjects</h3>
+        <span class="subject-count">3</span>
+      </div>
+      
+      <div class="subject-list">
+        <div class="subject-item active" onclick="loadSubject('Physics')">
+          <div class="subject-icon">
+            <i class="fas fa-atom"></i>
+          </div>
+          <div class="subject-name">Physics</div>
+          <div class="subject-desc">Mechanics, Thermodynamics, Electromagnetism</div>
+        </div>
+        
+        <div class="subject-item" onclick="loadSubject('Biology')">
+          <div class="subject-icon">
+            <i class="fas fa-dna"></i>
+          </div>
+          <div class="subject-name">Biology</div>
+          <div class="subject-desc">Genetics, Ecology, Human Anatomy</div>
+        </div>
+        
+        <div class="subject-item" onclick="loadSubject('chemistry')">
+          <div class="subject-icon">
+            <i class="fas fa-flask"></i>
+          </div>
+          <div class="subject-name">Chemistry</div>
+          <div class="subject-desc">Organic, Inorganic, Physical Chemistry</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CONTENT AREA -->
+    <section class="paro-content">
+      <div class="content-header">
+        <h2 id="subjectTitle" class="content-title">Select a Subject</h2>
+        
+        <div class="content-stats">
+          <div class="stat-box">
+            <div class="stat-value" id="lectureCount">0</div>
+            <div class="stat-label">Lectures</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-value" id="totalDuration">0h</div>
+            <div class="stat-label">Content</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-value" id="progressValue">0%</div>
+            <div class="stat-label">Progress</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LOADER -->
+      <div class="paro-loader" id="paroLoader">
+        <div class="loader-spinner"></div>
+        <div class="loader-text">LOADING LECTURES</div>
+        <div class="loader-subtext">Preparing immersive learning experience</div>
+      </div>
+
+      <!-- LECTURES GRID -->
+      <div class="lectures-grid" id="lectureContainer">
+        <!-- Lectures will be dynamically inserted here -->
+      </div>
+    </section>
+  </main>
+
+  <!-- PARO MODAL VIEWER -->
+  <div class="paro-modal" id="paroModal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 id="viewerTitle" class="modal-title">Lecture Title</h3>
+        <div class="modal-close" onclick="closeViewer()">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      
+      <div class="modal-body" id="viewerBody">
+        <!-- Video/Content will be inserted here -->
+      </div>
+      
+      <div class="modal-footer">
+        <div class="modal-nav">
+          <button class="nav-btn" id="prevBtn">
+            <i class="fas fa-arrow-left"></i> Previous
+          </button>
+          <button class="nav-btn" id="nextBtn">
+            Next <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+        
+        <div class="modal-info" id="modalInfo">
+          Use arrow keys to navigate between lectures
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/course2.js">
+    
+  </script>
+</body>
+</html>
