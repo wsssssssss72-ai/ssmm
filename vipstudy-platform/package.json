@@ -1,8 +1,9 @@
-{
-  "name": "static-html-project",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "build": "echo \"No build step required\""
-  }
+
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+      "dest": "/vipstudy-platform/index.html"
+    }
+  ]
 }
